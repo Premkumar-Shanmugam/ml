@@ -1,2 +1,2 @@
 # ml
-Repository for MAchine Learning projects
+Repository for Machine Learning projects
