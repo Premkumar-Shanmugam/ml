@@ -11,27 +11,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 import pandas as pd
 import numpy as np
-from sklearn.decomposition import PCA
-from sklearn.preprocessing import StandardScaler
-
 import matplotlib.pyplot as plt
-
-def do_pca(n_components, data):
-    '''
-    Transforms data using PCA to create n_components, and provides back the results of the
-    transformation.
-
-    INPUT: n_components - int - the number of principal components to create
-           data - the data you would like to transform
-
-    OUTPUT: pca - the pca object created after fitting the data
-            X_pca - the transformed X matrix with new number of components
-    '''
-    X = StandardScaler().fit_transform(data)
-    pca = PCA(n_components)
-    X_pca = pca.fit_transform(X)
-    return pca, X_pca
-
 
 def scree_plot(pca):
     '''
